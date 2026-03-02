@@ -1,4 +1,4 @@
 Codes with:
 1. In "spin-J field massless.nb" or "spin-J field massive.nb" there are the calculations for Bogoliubov coefficients with Feynman rules of the vertex interaction gravity-matter and the differential number density produced for those fields, where J = {0,1/2,1,2}.
 2. In [spin-J field TT](spin-J field TT) it's calculated the 2-point function <TT> (where T is the energy-stress tensor) needed to derive the vacuum persistence probability.
-3. Other codes contains Definition (used in the calculations) for spinors, polarization vectors and tensors or Checks of proprerties.
+3. In [Definitions and Properties] (https://github.com/stefanobartolomei/Master-s-Thesis/tree/295f2b8afd6a26e96afb6df08f1a18f4b1f042f6/Definitions%20and%20Properties) (used in the calculations) for spinors, polarization vectors and tensors or Checks of proprerties.
