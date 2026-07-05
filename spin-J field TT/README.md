@@ -8,4 +8,4 @@ In a cosmological scenario where the relevant momenta of the field are sub-horiz
 $$Im[\Gamma_{1\text{PI}}] = \frac{1}{8} \int \frac{d^4q}{(2\pi)^4}\frac{d^4q'}{(2\pi)^4} h_{\mu\nu}(-q) Im[\langle T^{\mu \nu}(q) T^{\rho \sigma}(q') \rangle] h_{\rho \sigma}(-q')$$.
 
 
-Each vacuum decay produces $2$ particles, so the number of particles produced is $N = 2 Im \Gamma_{1\text{PI}}$.
+Each vacuum decay produces $2$ particles, so the number of particles produced is $N = 2 IM \Gamma_{1\text{PI}}$.
