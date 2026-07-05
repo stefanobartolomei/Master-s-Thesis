@@ -13,6 +13,6 @@ with $\Pi^{\mu \nu \rho \sigma}(q) \equiv Im[\langle T^{\mu \nu}(q) T^{\rho \sig
 
 From this standpoint, for different spin of both massless and amssive field, we compute the imaginary part of the correlator function and specialize the results for the various sector of the metric field within the Newtonian gauge:
 
-$$ ds^2 = (1 + 2\Phi(t,\vec{x})) dt^2 - [\qty(1 - 2\Psi(t,\vec{x}))\delta_{ij} - 2\partial_{(i} W_{j)}(t,\vec{x}) - h^{\text{TT}}_{ij}(t,\vec{x})]dx^i dx^j$$
+$$ ds^2 = (1 + 2\Phi(t,\vec{x})) dt^2 - [(1 - 2\Psi(t,\vec{x}))\delta_{ij} - 2\partial_{(i} W_{j)}(t,\vec{x}) - h^{\text{TT}}_{ij}(t,\vec{x})]dx^i dx^j$$
 
 obtaining the kernel functions.
