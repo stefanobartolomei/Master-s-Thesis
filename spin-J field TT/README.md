@@ -5,7 +5,10 @@ $$|\prescript{}{out}{\langle 0}|0 \rangle_{in}|^2 = e^{-2Im \Gamma_{1\text{PI}}}
 
 In a cosmological scenario where the relevant momenta of the field are sub-horizon, we neglect the expansion of the universe and discussing perturbatively at leading order in the metric perturbation $h_{\mu \nu}$, the imaginary part of the 1PI effective action become
 
-$$Im[\Gamma_{1\text{PI}}] = \frac{1}{8} \int \frac{d^4q}{(2\pi)^4}\frac{d^4q'}{(2\pi)^4} h_{\mu\nu}(-q) Im[\langle T^{\mu \nu}(q) T^{\rho \sigma}(q') \rangle] h_{\rho \sigma}(-q')$$.
+\begin{equation}
+ok
+\end{equation}
+$$Im[\Gamma_{1\text{PI}}] = \frac{1}{8} \int \frac{d^4q}{(2\pi)^4}\frac{d^4q'}{(2\pi)^4} h_{\mu\nu}(-q) Im[\langle T^{\mu \nu}(q) T^{\rho \sigma}(q') \rangle] h_{\rho \sigma}(-q')$$
 
 
 Each vacuum decay produces $2$ particles, so the number of particles produced is $N = 2 Im \Gamma_{1\text{PI}}$.
