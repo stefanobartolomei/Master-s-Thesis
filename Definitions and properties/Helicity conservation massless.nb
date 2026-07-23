@@ -1,0 +1,3098 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    131127,       3090]
+NotebookOptionsPosition[    126594,       3014]
+NotebookOutlinePosition[    127025,       3031]
+CellTagsIndexPosition[    126982,       3028]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+  3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+  3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+  3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+  3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+  3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+  3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+  3.9729719611327286`*^9, 3.972972140287093*^9}, {3.9729729344174404`*^9, 
+  3.972972958591099*^9}},
+ CellLabel->
+  "In[256]:=",ExpressionUUID->"357078bb-284b-473b-87d2-9ddbf953739b"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Frame ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["k", "\[RightVector]"], TraditionalForm]],ExpressionUUID->
+  "d331c9f1-f8ea-4386-b002-a3dfab0e3adc"],
+ " = |",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["k", "\[RightVector]"], TraditionalForm]],ExpressionUUID->
+  "e2031b7b-d756-400e-821e-ee84e92cecba"],
+ "| (0,0,1) , ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Omega]", "\[RightVector]"], TraditionalForm]],
+  ExpressionUUID->"d71a7d2a-ea27-47e7-843a-27eb51b1272d"],
+ " = |",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["\[Omega]", "\[RightVector]"], TraditionalForm]],
+  ExpressionUUID->"33932eca-78d9-4cec-a564-21ba4b902851"],
+ "| (",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+        "cos", "\[Phi]", "sin", "\[Theta]", ",", ",", "sin", "\[Phi]", "sin", 
+         "\[Theta]", ",", "cos", "\[Theta]"}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "\\cos\\phi\\sin\\theta, ,\\sin\\phi\\sin\\theta,\\cos\\theta", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "442af2c3-4bd8-4e25-a32f-fe4a64599307"],
+ ")"
+}], "Chapter",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+  3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+  3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+  3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+  3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+  3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+  3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+  3.9729719611327286`*^9, 3.972972140287093*^9}, {3.9729729344174404`*^9, 
+  3.972973114624593*^9}},ExpressionUUID->"7ca19a53-47d5-4d2f-aa7d-\
+e3e3e1b6c145"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", " ", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Definizioni", " ", "--"}], "--"}], "--"}], 
+                    "--"}], "--"}], "--"}], "--"}], "--"}], "--"}], "--"}], 
+                    "--"}], "--"}], "--"}], "--"}], "--"}], "--"}], 
+                    "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}], "-"}], "*)"}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Definizione", " ", "momenti"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"K", " ", "=", " ", 
+     RowBox[{"k", "*", "z"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Kmu", " ", "=", " ", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Norm", "[", "K", "]"}], "}"}], ",", "K"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"R", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Cos", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", "\[Phi]", "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"Cos", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Sin", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}], ",", 
+         RowBox[{
+          RowBox[{"Sin", "[", "\[Phi]", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ",", "0", ",", 
+         RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"n", " ", "=", " ", 
+     RowBox[{"R", ".", "z"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Omega]", " ", "=", " ", 
+     RowBox[{"omega", "*", "n"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Omega]mu", " ", "=", " ", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Norm", "[", "\[Omega]", "]"}], "}"}], ",", " ", "\[Omega]"}],
+       "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Definizione", " ", "Spinori"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"J", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"(", GridBox[{
+          {"0", "0", "0"},
+          {"0", "0", 
+           RowBox[{"-", "I"}]},
+          {"0", "I", "0"}
+         }], ")"}], ",", 
+       RowBox[{"(", GridBox[{
+          {"0", "0", "I"},
+          {"0", "0", "0"},
+          {
+           RowBox[{"-", "I"}], "0", "0"}
+         }], ")"}], ",", 
+       RowBox[{"(", GridBox[{
+          {"0", 
+           RowBox[{"-", "I"}], "0"},
+          {"I", "0", "0"},
+          {"0", "0", "0"}
+         }], ")"}]}], "}"}]}], ";"}], " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"JK", " ", "=", " ", 
+     RowBox[{"J", ".", "z"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"solK", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{"Eigensystem", "[", "JK", "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Spinori", " ", "K"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Epsilon]PlusK", " ", "=", " ", 
+     RowBox[{"I", "*", 
+      RowBox[{"Normalize", "[", 
+       RowBox[{"solK", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "2"}], "]"}], "]"}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Epsilon]MinusK", " ", "=", " ", 
+     RowBox[{"I", "*", 
+      RowBox[{"Normalize", "[", 
+       RowBox[{"solK", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "1"}], "]"}], "]"}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"SPinori", " ", "\[Omega]"}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Epsilon]Plus\[Omega]", " ", "=", " ", 
+     RowBox[{"R", ".", "\[Epsilon]PlusK"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Epsilon]Minus\[Omega]", " ", "=", " ", 
+     RowBox[{"R", ".", "\[Epsilon]MinusK"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", "Metrica", " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"eta", " ", "=", " ", 
+     RowBox[{"DiagonalMatrix", "[", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{"-", "1"}]}], "}"}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+  3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+  3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+  3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+  3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+  3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+  3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+  3.9729719611327286`*^9, 3.972972140287093*^9}, {3.9729729344174404`*^9, 
+  3.9729729528392477`*^9}, {3.9729731236165743`*^9, 3.9729731514549384`*^9}},
+ CellLabel->
+  "In[257]:=",ExpressionUUID->"16cc3320-b26d-4fe9-89ad-75cdaa7cf8e3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Helicity conservation in    ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["h", "TI"], TraditionalForm], "errors" -> {}, "input" -> "h", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f3f0382e-4b90-4c10-90a5-dfaca757de4a"],
+ " \[Rule] ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["A", "TI"], "+", 
+         StyleBox["A", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "A+A", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c7a32bbb-5c18-457d-8f0f-bea0574d6488"]
+}], "Title",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+  3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+  3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+  3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+  3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+  3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+  3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+  3.9729719611327286`*^9, 
+  3.972972209338683*^9}},ExpressionUUID->"08b4c6d7-fda0-4801-8c8c-\
+a5986729ed28"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"Caso", " ", "polarizzazioni", " ", 
+   SuperscriptBox[
+    SubscriptBox["\[Epsilon]", 
+     TemplateBox[<|"boxes" -> FormBox[
+         StyleBox["k", "TI"], TraditionalForm], "errors" -> {}, "input" -> 
+       "k", "state" -> "Boxes"|>,
+      "TeXAssistantTemplate"]], "+"], " ", 
+   SuperscriptBox[
+    SubscriptBox["\[Epsilon]", "\[Omega]"], "+"]}]],
+  CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+   3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+   3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+   3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+   3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+   3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+   3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+   3.9729719611327286`*^9, 3.9729721540846663`*^9}, {3.9729722148835783`*^9, 
+   3.9729722260151396`*^9}},ExpressionUUID->
+  "a75e41b0-e8e9-4b9c-aee7-8b06ea0346fb"],
+ ": should be all zero"
+}], "Chapter",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+  3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+  3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+  3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+  3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+  3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+  3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+  3.9729719611327286`*^9, 3.9729721540846663`*^9}, {3.9729722148835783`*^9, 
+  3.972972294888256*^9}},ExpressionUUID->"0ea423c6-1aa6-4122-ba53-\
+aa72ff6ac336"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Prodotti", " ", "scalari", " ", "nelle", " ", "formule"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Prod1PP", " ", "=", " ", 
+     RowBox[{"\[Epsilon]PlusK", ".", "\[Epsilon]Plus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod2PP", " ", "=", " ", 
+     RowBox[{"K", ".", "\[Epsilon]Plus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod3PP", " ", "=", " ", 
+     RowBox[{"\[Omega]", ".", "\[Epsilon]PlusK"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod4PP", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod5PP", " ", "=", " ", 
+     RowBox[{"Prod3PP", "*", "Prod2PP"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod6PP", " ", "=", " ", 
+     RowBox[{"Prod4PP", "*", "Prod1PP"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "ricordiamo", " ", "che", " ", "la", " ", "componente", " ", "0", " ", 
+     "dei", " ", "vettori", " ", "di", " ", "polarizzazione", " ", 
+     "\[EGrave]", " ", "nulla"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP00", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], "  ", "-", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PP", " ", "+", " ", "Prod6PP"}], ")"}]}], ",", " ", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): \>\"", ",", "\[Beta]PP00"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP01", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP01"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP02", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP02"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP03", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP03"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP11", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PP", " ", "+", " ", "Prod6PP"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): \>\"", ",", "\[Beta]PP11"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP12", " ", "=", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP12"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP13", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP13"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP22", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PP", " ", "+", " ", "Prod6PP"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): \>\"", ",", "\[Beta]PP22"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP23", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): \>\
+\"", ",", "\[Beta]PP23"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PP33", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PP", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Plus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PP", " ", "+", " ", "Prod6PP"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): \>\"", ",", "\[Beta]PP33"}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.972968999696724*^9, 3.9729690653788967`*^9}, {
+   3.9729691879754453`*^9, 3.972969520671891*^9}, {3.972969580535175*^9, 
+   3.972969585525497*^9}, {3.972969655370138*^9, 3.972969662920904*^9}, {
+   3.9729697208411617`*^9, 3.9729698187470107`*^9}, {3.9729699099224606`*^9, 
+   3.972969959794667*^9}, {3.9729699899091187`*^9, 3.9729709342566915`*^9}, {
+   3.9729709783266068`*^9, 3.972971022960944*^9}, {3.9729710736142044`*^9, 
+   3.972971223759447*^9}, {3.9729712560090017`*^9, 3.9729714255277596`*^9}, {
+   3.9729719611327286`*^9, 3.9729721540846663`*^9}, {3.9729722148835783`*^9, 
+   3.972972266517065*^9}, {3.9729723091693354`*^9, 3.972972310834875*^9}, {
+   3.9729728681179447`*^9, 3.9729728741530204`*^9}, {3.972972905987358*^9, 
+   3.9729729287005153`*^9}, {3.972973170047783*^9, 3.9729731724561543`*^9}, 
+   3.972973312398897*^9},
+ CellLabel->
+  "In[272]:=",ExpressionUUID->"5cfe2252-09fe-4fb0-9745-8b19d36b0bd6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(00\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.973338615940564*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"bb71fffe-7e10-4992-a8d5-684f48b976d9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(01\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(10\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386160766554`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"a1d11fd5-e184-418a-a4b4-3503e3ad74b5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(02\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(20\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386161024303`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"1debee2b-6fa1-47f9-b33d-e78d52277b20"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(03\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(30\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.973338616109639*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"246370b2-a02d-48c2-87f2-51a0de2c9896"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(11\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386161242623`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"e6a894b8-73d5-4228-b060-07c3104e18d4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(12\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(21\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386161412487`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"958b4c81-f344-4bf7-98ad-095c2c9833a1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(13\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(31\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386161412487`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"18dab3b0-48b6-487b-aa64-9bfa61daa7ef"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(22\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386162661*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"d1b3ab17-729c-4b60-8b4c-3e9e10be8109"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(23\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(32\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.973338616281791*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"0d56fc9e-ba79-4f12-8922-0eb9c524076d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(33\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(+\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(+\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.97297043867085*^9, {3.9729705075016623`*^9, 3.972970533330491*^9}, {
+   3.9729705825898514`*^9, 3.9729706083653936`*^9}, 3.972970916347039*^9, 
+   3.9729709900727143`*^9, {3.972971155392405*^9, 3.9729711737569275`*^9}, {
+   3.972971209349514*^9, 3.9729712248530874`*^9}, {3.972971271137353*^9, 
+   3.972971283892249*^9}, 3.9729713420160475`*^9, 3.9729713996243305`*^9, 
+   3.972972021934181*^9, 3.972972114448921*^9, {3.9729731622997417`*^9, 
+   3.9729731752428455`*^9}, 3.972980868900027*^9, 3.9733386162979436`*^9},
+ CellLabel->
+  "During evaluation of \
+In[272]:=",ExpressionUUID->"f69ff8b2-bae9-44a6-b17b-18f719608c52"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Caso", " ", "polarizzazioni", " ", 
+  SuperscriptBox[
+   SubscriptBox["\[Epsilon]", 
+    TemplateBox[<|"boxes" -> FormBox[
+        StyleBox["k", "TI"], TraditionalForm], "errors" -> {}, "input" -> "k",
+       "state" -> "Boxes"|>,
+     "TeXAssistantTemplate"]], "-"], " ", 
+  RowBox[{
+   SuperscriptBox[
+    SubscriptBox["\[Epsilon]", "\[Omega]"], "-"], ":", " ", 
+   RowBox[{
+   "should", " ", "be", " ", "all", " ", "be", " ", "zero"}]}]}]], "Chapter",
+ CellChangeTimes->{{3.972972320262663*^9, 3.9729723409016933`*^9}, {
+   3.9729724213831263`*^9, 3.9729724252092876`*^9}, {3.9729736129106903`*^9, 
+   3.9729736206876097`*^9}, 
+   3.9729737100279903`*^9},ExpressionUUID->"757eafe8-d7ec-4f0a-941e-\
+773ae44733a2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Prodotti", " ", "scalari", " ", "nelle", " ", "formule"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Prod1MM", " ", "=", " ", 
+     RowBox[{"\[Epsilon]MinusK", ".", "\[Epsilon]Minus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod2MM", " ", "=", " ", 
+     RowBox[{"K", ".", "\[Epsilon]Minus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod3MM", " ", "=", " ", 
+     RowBox[{"\[Omega]", ".", "\[Epsilon]MinusK"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod4MM", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod5MM", " ", "=", " ", 
+     RowBox[{"Prod3MM", "*", "Prod2MM"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod6MM", " ", "=", " ", 
+     RowBox[{"Prod4MM", "*", "Prod1MM"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "ricordiamo", " ", "che", " ", "la", " ", "componente", " ", "0", " ", 
+     "dei", " ", "vettori", " ", "di", " ", "polarizzazione", " ", 
+     "\[EGrave]", " ", "nulla"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM00", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], "  ", "-", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5MM", " ", "+", " ", "Prod6MM"}], ")"}]}], ",", " ", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]MM00"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM01", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]MinusK", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM01"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM02", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]MinusK", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM02"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM03", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]MinusK", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM03"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM11", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5MM", " ", "+", " ", "Prod6MM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]MM11"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM12", " ", "=", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM12"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM13", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM13"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM22", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5MM", " ", "+", " ", "Prod6MM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]MM22"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM23", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]MinusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]MM23"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]MM33", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3MM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]MinusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5MM", "+", " ", "Prod6MM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]MM33"}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{
+  3.972972320262663*^9, {3.9729724147564435`*^9, 3.9729729005052266`*^9}, 
+   3.972973308572841*^9},
+ CellLabel->
+  "In[298]:=",ExpressionUUID->"e58ec27b-ed54-4895-a398-50794aecd9dc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(00\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.973338623213544*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"cd12a75c-ee48-41bb-ab69-ab4f73bc79a1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(01\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(10\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.973338623227173*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"5313c751-591d-4195-9f97-e2d5124d042b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(02\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(20\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.973338623281441*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"dd0b38fa-836e-4dca-9325-24ca7fde2a41"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(03\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(30\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386233154616`*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"d950502d-3f43-46cf-8258-d3b42efe5239"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(11\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386234813147`*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"cf453acf-6908-476d-90d1-93a4f6600ba9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(12\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(21\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.973338623497443*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"0c320b14-4dfb-41a3-8cf0-18bc0df0be08"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(13\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(31\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386235089307`*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"3f33c925-34c4-4254-9e9e-78942fd538d5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(22\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386235195*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"a0254a75-65b7-415b-bd8a-683281590260"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(23\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(32\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(-\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386235313034`*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"e23fcb7c-e294-408d-83ba-782d2f0a204c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(33\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(-\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(-\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9729731793247566`*^9, 3.9729808727167826`*^9, 
+  3.9733386235433683`*^9},
+ CellLabel->
+  "During evaluation of \
+In[298]:=",ExpressionUUID->"ec4e51c7-2480-41e9-b177-af45059a64c5"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{"Caso", " ", "polarizzazioni", " ", 
+   SuperscriptBox[
+    SubscriptBox["\[Epsilon]", 
+     TemplateBox[<|"boxes" -> FormBox[
+         StyleBox["k", "TI"], TraditionalForm], "errors" -> {}, "input" -> 
+       "k", "state" -> "Boxes"|>,
+      "TeXAssistantTemplate"]], "+"], " ", 
+   SuperscriptBox[
+    SubscriptBox["\[Epsilon]", "\[Omega]"], "-"]}]],
+  CellChangeTimes->{{3.972972320262663*^9, 3.9729723409016933`*^9}, {
+   3.9729724213831263`*^9, 3.9729724252092876`*^9}},ExpressionUUID->
+  "5350f7f6-2b82-42db-9b98-848ae63f3e2d"],
+ "  shouldn\[CloseCurlyQuote]t be zero"
+}], "Chapter",
+ CellChangeTimes->{{3.972973208280058*^9, 3.972973211404667*^9}, {
+  3.9729736001392226`*^9, 3.9729736305506268`*^9}, {3.972973704456366*^9, 
+  3.972973704456366*^9}},ExpressionUUID->"cf7b5cce-6035-4b52-81e0-\
+868b31b35fc4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Prodotti", " ", "scalari", " ", "nelle", " ", "formule"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Prod1PM", " ", "=", " ", 
+     RowBox[{"\[Epsilon]PlusK", ".", "\[Epsilon]Minus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod2PM", " ", "=", " ", 
+     RowBox[{"K", ".", "\[Epsilon]Minus\[Omega]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod3PM", " ", "=", " ", 
+     RowBox[{"\[Omega]", ".", "\[Epsilon]PlusK"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod4PM", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod5PM", " ", "=", " ", 
+     RowBox[{"Prod3PM", "*", "Prod2PM"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Prod6PM", " ", "=", " ", 
+     RowBox[{"Prod4PM", "*", "Prod1PM"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "ricordiamo", " ", "che", " ", "la", " ", "componente", " ", "0", " ", 
+     "dei", " ", "vettori", " ", "di", " ", "polarizzazione", " ", 
+     "\[EGrave]", " ", "nulla"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM00", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], "  ", "-", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PM", " ", "+", " ", "Prod6PM"}], ")"}]}], ",", " ", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]PM00"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM01", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM01"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM02", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM02"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM03", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"\[Omega]mu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]PlusK", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"Kmu", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "*", 
+         RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM03"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM11", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PM", " ", "+", " ", "Prod6PM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]PM11"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM12", " ", "=", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM12"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM13", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM13"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM22", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PM", " ", "+", " ", "Prod6PM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]PM22"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM23", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"\[Omega]mu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], " ", ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", " ", 
+           RowBox[{
+            RowBox[{"Kmu", "[", 
+             RowBox[{"[", "4", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], " ", "+", 
+           RowBox[{
+            RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], "*", 
+            RowBox[{"\[Epsilon]PlusK", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ")"}]}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): \>\
+\"", ",", "\[Beta]PM23"}], "]"}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Beta]PM33", " ", "=", " ", 
+     RowBox[{"FullSimplify", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Prod1PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod2PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Omega]mu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{"Prod3PM", "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Kmu", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"eta", ".", "\[Omega]mu"}], ")"}], ".", "Kmu"}], ")"}], 
+         "*", "2", "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]Minus\[Omega]", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "*", 
+           RowBox[{"\[Epsilon]PlusK", "[", 
+            RowBox[{"[", "3", "]"}], "]"}]}], ")"}]}], " ", "+", " ", 
+        RowBox[{"(", 
+         RowBox[{"Prod5PM", "+", " ", "Prod6PM"}], ")"}]}], ",", 
+       RowBox[{"Assumptions", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"k", ">", "0"}], ",", " ", 
+          RowBox[{"omega", ">", "0"}], ",", " ", 
+          RowBox[{"0", "<", "\[Theta]", " ", "<", " ", "\[Pi]"}], ",", " ", 
+          RowBox[{"0", " ", "<", " ", "\[Phi]", " ", "<", " ", 
+           RowBox[{"2", "\[Pi]"}]}]}], "}"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{
+     "\"\<\\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): \>\"", ",", "\[Beta]PM33"}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.9729732371644526`*^9, 3.9729735937781773`*^9}, {
+  3.97297365004144*^9, 3.972973691683784*^9}, {3.972980907521048*^9, 
+  3.9729809136328692`*^9}, {3.973338657787031*^9, 3.9733386592062693`*^9}},
+ CellLabel->
+  "In[350]:=",ExpressionUUID->"0ca62514-d91e-4b8a-8d12-266cfe7d2d7e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(00\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[ImaginaryI]", " ", "\[Phi]"}]]}], " ", "k", " ", "omega", 
+    " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(00\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", -
+   E^(Complex[0, 1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386869769945`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"adb7e7ee-cf9b-41cf-927c-b66219841f1d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(01\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(10\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "k"}], " ", "omega", " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(01\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(10\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", \
+-$CellContext`k $CellContext`omega Sin[$CellContext`\[Theta]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386869857273`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"07db8340-bd10-42ab-93b6-6e97ec1c1dc2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(02\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(20\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", "k", " ", "omega", " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(02\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(20\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   Complex[0, -1] $CellContext`k $CellContext`omega 
+   Sin[$CellContext`\[Theta]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.973338687017362*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"50b72e27-585e-4c69-8c32-05ec048effbb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(03\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(30\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[ImaginaryI]", " ", "\[Phi]"}]]}], " ", "k", " ", "omega", 
+    " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(03\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(30\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", \
+-E^(Complex[0, 1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386870350647`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"ee1d31ac-23c5-4a3e-af19-9a399d5c4fdd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(11\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Phi]"}]], " ", "k", " ", 
+    "omega", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(11\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", 
+   E^(Complex[
+      0, -1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (-1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386870496435`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"c2c8bf5e-9471-44de-bb40-0f7c0616f17b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(12\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(21\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{"\[ImaginaryI]", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Phi]"}]], " ", "k", " ", 
+    "omega", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(12\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(21\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   Complex[0, 1] 
+   E^(Complex[
+      0, -1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (-1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.97333868706699*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"8c433fef-133c-4b71-bcb4-20f9c72eedd0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(13\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(31\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "k"}], " ", "omega", " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(13\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(31\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", \
+-$CellContext`k $CellContext`omega Sin[$CellContext`\[Theta]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.973338687084338*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"cbce5481-e977-4c4c-911c-9d7423d8b01b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(22\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Phi]"}]]}], " ", "k", " ", 
+    "omega", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(22\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", -
+   E^(Complex[
+      0, -1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (-1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386870982513`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"1a45a4f5-93ed-4f96-a527-9809b796be7b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(23\\)]\\) (=\\!\\(\\*SubscriptBox[\\(\[Beta]\\), \\(32\\)]\\) per \
+simmetria) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], " ", "k", " ", "omega", " ", 
+    RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(23\)]\) \
+(=\!\(\*SubscriptBox[\(\[Beta]\), \(32\)]\) per simmetria) con polarizzazioni \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \(+\)]\) \
+\!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\)]\): ", 
+   Complex[0, -1] $CellContext`k $CellContext`omega 
+   Sin[$CellContext`\[Theta]]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.9733386871143813`*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"ba132048-57d1-4a4d-bb96-eb9e54331862"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\n Coefficiente \\!\\(\\*SubscriptBox[\\(\[Beta]\\), \
+\\(33\\)]\\) con polarizzazioni \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(k\\)], \\(+\\)]\\) \\!\\(\\*SuperscriptBox[SubscriptBox[\\(\
+\[Epsilon]\\), \\(\[Omega]\\)], \\(-\\)]\\): \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[ImaginaryI]", " ", "\[Phi]"}]]}], " ", "k", " ", "omega", 
+    " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}]}]}],
+  SequenceForm[
+  "\n Coefficiente \!\(\*SubscriptBox[\(\[Beta]\), \(33\)]\) con \
+polarizzazioni \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(k\)], \
+\(+\)]\) \!\(\*SuperscriptBox[SubscriptBox[\(\[Epsilon]\), \(\[Omega]\)], \(-\
+\)]\): ", -
+   E^(Complex[0, 1] $CellContext`\[Phi]) $CellContext`k $CellContext`omega (1 + 
+    Cos[$CellContext`\[Theta]])],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.972973545803982*^9, {3.972973580351943*^9, 3.9729735947474794`*^9}, 
+   3.9729736940976896`*^9, 3.972980876405463*^9, 3.9729809154292135`*^9, 
+   3.973338628821663*^9, 3.973338687128866*^9},
+ CellLabel->
+  "During evaluation of \
+In[350]:=",ExpressionUUID->"f1add2a8-0ee3-4b6d-8a38-2d3673ca1f70"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1012.5, 501.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>0.8 Inherited,
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"272e45f9-f9e2-49af-8d9c-ded599e1a4bc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 820, 14, 38, "Input",ExpressionUUID->"357078bb-284b-473b-87d2-9ddbf953739b"],
+Cell[CellGroupData[{
+Cell[1403, 38, 1823, 44, 57, "Chapter",ExpressionUUID->"7ca19a53-47d5-4d2f-aa7d-e3e3e1b6c145"],
+Cell[3229, 84, 6630, 184, 418, "Input",ExpressionUUID->"16cc3320-b26d-4fe9-89ad-75cdaa7cf8e3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9896, 273, 1315, 29, 80, "Title",ExpressionUUID->"08b4c6d7-fda0-4801-8c8c-a5986729ed28"],
+Cell[CellGroupData[{
+Cell[11236, 306, 1807, 32, 60, "Chapter",ExpressionUUID->"0ea423c6-1aa6-4122-ba53-aa72ff6ac336"],
+Cell[CellGroupData[{
+Cell[13068, 342, 25748, 628, 769, "Input",ExpressionUUID->"5cfe2252-09fe-4fb0-9745-8b19d36b0bd6"],
+Cell[CellGroupData[{
+Cell[38841, 974, 1264, 22, 32, "Print",ExpressionUUID->"bb71fffe-7e10-4992-a8d5-684f48b976d9"],
+Cell[40108, 998, 1398, 24, 32, "Print",ExpressionUUID->"a1d11fd5-e184-418a-a4b4-3503e3ad74b5"],
+Cell[41509, 1024, 1398, 24, 32, "Print",ExpressionUUID->"1debee2b-6fa1-47f9-b33d-e78d52277b20"],
+Cell[42910, 1050, 1396, 24, 32, "Print",ExpressionUUID->"246370b2-a02d-48c2-87f2-51a0de2c9896"],
+Cell[44309, 1076, 1266, 22, 32, "Print",ExpressionUUID->"e6a894b8-73d5-4228-b060-07c3104e18d4"],
+Cell[45578, 1100, 1398, 24, 32, "Print",ExpressionUUID->"958b4c81-f344-4bf7-98ad-095c2c9833a1"],
+Cell[46979, 1126, 1398, 24, 32, "Print",ExpressionUUID->"18dab3b0-48b6-487b-aa64-9bfa61daa7ef"],
+Cell[48380, 1152, 1262, 22, 32, "Print",ExpressionUUID->"d1b3ab17-729c-4b60-8b4c-3e9e10be8109"],
+Cell[49645, 1176, 1396, 24, 32, "Print",ExpressionUUID->"0d56fc9e-ba79-4f12-8922-0eb9c524076d"],
+Cell[51044, 1202, 1266, 22, 32, "Print",ExpressionUUID->"f69ff8b2-bae9-44a6-b17b-18f719608c52"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52371, 1231, 739, 17, 58, "Chapter",ExpressionUUID->"757eafe8-d7ec-4f0a-941e-773ae44733a2"],
+Cell[CellGroupData[{
+Cell[53135, 1252, 25050, 619, 769, "Input",ExpressionUUID->"e58ec27b-ed54-4895-a398-50794aecd9dc"],
+Cell[CellGroupData[{
+Cell[78210, 1875, 817, 16, 32, "Print",ExpressionUUID->"cd12a75c-ee48-41bb-ab69-ab4f73bc79a1"],
+Cell[79030, 1893, 949, 18, 32, "Print",ExpressionUUID->"5313c751-591d-4195-9f97-e2d5124d042b"],
+Cell[79982, 1913, 949, 18, 32, "Print",ExpressionUUID->"dd0b38fa-836e-4dca-9325-24ca7fde2a41"],
+Cell[80934, 1933, 951, 18, 32, "Print",ExpressionUUID->"d950502d-3f43-46cf-8258-d3b42efe5239"],
+Cell[81888, 1953, 819, 16, 32, "Print",ExpressionUUID->"cf453acf-6908-476d-90d1-93a4f6600ba9"],
+Cell[82710, 1971, 949, 18, 32, "Print",ExpressionUUID->"0c320b14-4dfb-41a3-8cf0-18bc0df0be08"],
+Cell[83662, 1991, 951, 18, 32, "Print",ExpressionUUID->"3f33c925-34c4-4254-9e9e-78942fd538d5"],
+Cell[84616, 2011, 815, 16, 32, "Print",ExpressionUUID->"a0254a75-65b7-415b-bd8a-683281590260"],
+Cell[85434, 2029, 951, 18, 32, "Print",ExpressionUUID->"e23fcb7c-e294-408d-83ba-782d2f0a204c"],
+Cell[86388, 2049, 819, 16, 32, "Print",ExpressionUUID->"ec4e51c7-2480-41e9-b177-af45059a64c5"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87268, 2072, 855, 19, 60, "Chapter",ExpressionUUID->"cf7b5cce-6035-4b52-81e0-868b31b35fc4"],
+Cell[CellGroupData[{
+Cell[88148, 2095, 25123, 619, 769, "Input",ExpressionUUID->"0ca62514-d91e-4b8a-8d12-266cfe7d2d7e"],
+Cell[CellGroupData[{
+Cell[113296, 2718, 1304, 28, 32, "Print",ExpressionUUID->"adb7e7ee-cf9b-41cf-927c-b66219841f1d"],
+Cell[114603, 2748, 1228, 23, 32, "Print",ExpressionUUID->"07db8340-bd10-42ab-93b6-6e97ec1c1dc2"],
+Cell[115834, 2773, 1268, 24, 32, "Print",ExpressionUUID->"50b72e27-585e-4c69-8c32-05ec048effbb"],
+Cell[117105, 2799, 1430, 29, 32, "Print",ExpressionUUID->"ee1d31ac-23c5-4a3e-af19-9a399d5c4fdd"],
+Cell[118538, 2830, 1334, 30, 32, "Print",ExpressionUUID->"c2c8bf5e-9471-44de-bb40-0f7c0616f17b"],
+Cell[119875, 2862, 1499, 32, 32, "Print",ExpressionUUID->"8c433fef-133c-4b71-bcb4-20f9c72eedd0"],
+Cell[121377, 2896, 1226, 23, 32, "Print",ExpressionUUID->"cbce5481-e977-4c4c-911c-9d7423d8b01b"],
+Cell[122606, 2921, 1358, 31, 32, "Print",ExpressionUUID->"1a45a4f5-93ed-4f96-a527-9809b796be7b"],
+Cell[123967, 2954, 1270, 24, 32, "Print",ExpressionUUID->"ba132048-57d1-4a4d-bb96-eb9e54331862"],
+Cell[125240, 2980, 1302, 28, 32, "Print",ExpressionUUID->"f1add2a8-0ee3-4b6d-8a38-2d3673ca1f70"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
